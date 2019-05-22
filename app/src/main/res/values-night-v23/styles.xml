@@ -1,0 +1,98 @@
+<resources>
+
+    <style name="MeraPureUI2" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:datePickerDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:timePickerDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+        <item name="popupMenuStyle">@style/MeraPureUI2PopupMenu</item>
+        <!--<item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>-->
+    </style>
+
+    <style name="MeraPureUI2Settings" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:actionBarTheme">@style/MeraPureUI2Settings.ActionBar</item>
+        <item name="android:homeAsUpIndicator">@drawable/round_arrow_back_24</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+        <!--<item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>-->
+    </style>
+
+    <style name="MeraPureUI2Settings.ActionBar" parent="Theme.MaterialComponents">
+        <item name="android:homeAsUpIndicator">@drawable/round_arrow_back_24</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:colorControlNormal">#ffffff</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="MeraPureUI2Activity" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:actionBarTheme">@style/MeraPureUI2Settings.ActionBar</item>
+        <item name="android:homeAsUpIndicator">@drawable/round_arrow_back_24</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+        <item name="popupMenuStyle">@style/MeraPureUI2PopupMenu</item>
+        <!--<item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>-->
+    </style>
+
+    <style name="MeraPureUI2Activity.ActionBar" parent="Theme.MaterialComponents">
+        <item name="android:homeAsUpIndicator">@drawable/round_arrow_back_24</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:colorControlNormal">#ffffff</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="MeraPureUI2Splash" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <!--<item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>-->
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="MeraPureUI2Lab" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#e5e5e5</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:alertDialogTheme">@style/MeraPureUI2Dialog</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="MeraPureUI2About" parent="Theme.MaterialComponents">
+        <item name="android:actionBarTheme">@style/MeraPureUI2Settings.ActionBar</item>
+        <item name="android:homeAsUpIndicator">@drawable/round_arrow_back_24</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="MeraPureUI2Dialog" parent="android:Theme.DeviceDefault.Dialog.Alert">
+        <item name="android:background">@color/dialogColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+        <item name="android:windowTitleStyle">@style/MeraPureUI2DialogTitle</item>
+        <!--<item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>-->
+    </style>
+
+    <style name="MeraPureUI2SwitchStyle">
+        <item name="colorControlActivated">#212121</item>
+    </style>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorPrimaryDarkL">#898989</color>
+    <color name="colorAccent">#ff4285f4</color>
+    <color name="colorNightAccent">#ff4285f4</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="colorNavigation">#FFFFFF</color>
+    <color name="systemnavcolor">#e5e5e5</color>
+    <color name="ic_background">#FFFFFF</color>
+    <color name="text_color">#212121</color>
+    <color name="text_color_item">#212121</color>
+    <color name="settings_info_color">#686868</color>
+    <color name="settings_text_color">#212121</color>
+    <color name="toolbar_button_color">#000000</color>
+    <color name="system_nav">#fafafa</color>
+    <color name="loadColor">#CCffffff</color>
+    <color name="itemColors">#00ffffff</color>
+    <color name="dialogColor">#ffffff</color>
+    <color name="popupColor">#ffffff</color>
+</resources>

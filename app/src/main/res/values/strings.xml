@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- APPLICATION -->
+    <string name="app_name" translatable="false">Mera Social</string>
+    <string name="app_name_pro" translatable="false">Mera Social Pro</string>
+    <string name="notify_del" translatable="false">DEL</string>
+    <string name="notify_remind" translatable="false">Remind</string>
+    <string name="app_loading_title">Please wait..</string>
+    <string name="welcome_mediabook">Hello, welcome to Mera Social</string>
+    <string name="warning_setting_title">Attention!</string>
+    <string name="close_btn">Close</string>
+    <string name="app_warning_title">Warning!</string>
+    <string name="open_mediabook" translatable="false">Start navigating</string>
+    <string name="share_url">Share..</string>
+    <string name="other_browser">Open in external browser</string>
+    <string name="okay_btn">Okay</string>
+    <string name="quit_btn">Quit</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="yes_btn">Yes</string>
+    <string name="no_btn">No</string>
+    <string name="other_links_error_title">Unknown protocol</string>
+    <string name="app_picture_chooser">Image Chooser</string>
+    <string name="app_youtube_opened_title">Your full screen videos are adjusted according to your phone\'s sensor.</string>
+    <string name="close_fullscreen">You can press back to exit the full screen.</string>
+    <string name="happy_aospstudio_title" translatable="false">We\'re in our 3rd year!</string>
+    <string name="happy_aospstudio_msg" translatable="false">Thank you for not leaving us alone in the 3rd year of our establishment and for choosing our products. In order to provide you with better experiences, we continue to work with our strengths. If you wish, you can contribute to us by making a donation at the age of 3.</string>
+    <string name="happy_aospstudio_ok_btn" translatable="false">Close</string>
+    <string name="happy_aospstudio_donate_btn" translatable="false">Donate</string>
+    <string name="dev_aospstudio" translatable="false">AOSP STUDIO LLC</string>
+    <string name="issue_tracker_btn" translatable="false">issue tracker</string>
+
+    <!-- VERSIONS -->
+    <string name="app_version" translatable="false">1.0.1000.10</string>
+    <string name="chromium_version" translatable="false">Chrome/73.0.3683.90 Mobile</string>
+    <string name="opr_version" translatable="false">OPR/52.1.2517.139570</string>
+    <string name="dsktp_chromium_version" translatable="false">Chrome/73.0.3683.86</string>
+    <string name="dsktp_opr_version" translatable="false">OPR/60.0.3255.84</string>
+
+    <!-- SITE NAMES -->
+    <string name="app_name_facebook" translatable="false">facebook</string>
+    <string name="app_name_instagram" translatable="false">Instagram</string>
+    <string name="app_name_soundcloud" translatable="false">SoundCloud</string>
+    <string name="app_name_twitter" translatable="false">twitter</string>
+    <string name="app_name_periscope" translatable="false">Periscope</string>
+    <string name="app_name_medium" translatable="false">Medium</string>
+    <string name="app_name_pinterest" translatable="false">Pinterest</string>
+    <string name="app_name_gplus" translatable="false">Google+</string>
+    <string name="app_name_linkedin" translatable="false">LinkedIn</string>
+    <string name="app_name_flickr" translatable="false">Flickr</string>
+    <string name="app_name_myspace" translatable="false">myspace</string>
+    <string name="app_name_tumblr" translatable="false">tumblr</string>
+    <string name="app_name_reddit" translatable="false">Reddit</string>
+    <string name="app_name_dailymotion" translatable="false">dailymotion</string>
+    <string name="app_name_twitch" translatable="false">Twitch</string>
+    <string name="app_name_vk" translatable="false">VK</string>
+    <string name="app_name_weibo" translatable="false">Sina Weibo</string>
+    <string name="app_name_youtube" translatable="false">YouTube</string>
+    <string name="app_name_wiki" translatable="false">Wikipedia</string>
+    <string name="app_name_lastfm" translatable="false">last.fm</string>
+    <string name="app_name_livejournal" translatable="false">LiveJournal</string>
+    <string name="app_name_izlesene" translatable="false">izlesene</string>
+    <string name="app_name_askfm" translatable="false">ask.fm</string>
+    <string name="app_name_tinder" translatable="false">Tinder</string>
+    <string name="app_name_messenger" translatable="false">Messenger</string>
+    <string name="app_name_workplace" translatable="false">Workplace</string>
+    <string name="app_name_badoo" translatable="false">Badoo</string>
+    <string name="app_name_twoo" translatable="false">Twoo</string>
+    <string name="app_name_meetup" translatable="false">Meetup</string>
+    <string name="app_name_quora" translatable="false">Quora</string>
+    <string name="app_name_wattpad" translatable="false">Wattpad</string>
+
+    <!-- NAV SHORTCUTS -->
+    <string name="settings_btn">Settings</string>
+    <string name="quit_application_btn">Exit application</string>
+    <string name="exitapp_btn">exit app</string>
+
+    <!-- ERROR SCREEN -->
+    <string name="app_error_dialog_title">Unexpected error!</string>
+    <string name="app_network_connection_error">Your current Internet connection was not found, please connect to a network and restart the application</string>
+    <string name="app_page_load_error">For some reason, the browser crashed, unfortunately, we have lost your existing operations, thanks to the smart rescuer, which is the last time you left the browser to re-start the page.</string>
+    <string name="error_page_load">Sorry, Browser has stopped working unexpectedly.\n\nThe following reason has stopped the scanner and has lost its operations. However, the most recently left page is in the browser memory.\n\nPlease correct the problem in the error section below and touch Fix and re-start below.</string>
+    <string name="retry_btn">Fix and restart</string>
+
+    <!-- SSL -->
+    <string name="ssl_dialog_title">SSL Certificate Error</string>
+    <string name="ssl_dialog_message">Do you want to continue anyway?</string>
+    <string name="ssl_untrusted">The certificate authority is not trusted.</string>
+    <string name="ssl_expired">The certificate has expired.</string>
+    <string name="ssl_idmismatch">The certificate Hostname mismatch.</string>
+    <string name="ssl_notypevalid">The certificate is not yet valid.</string>
+
+    <!-- DOWNLOAD MANAGER -->
+    <string name="download_error_title">Could not download file</string>
+    <string name="app_download_file">Download file..</string>
+    <string name="app_downloading_file">Downloading file</string>
+
+    <!-- RATE DIALOG -->
+    <string name="rate_dialog_title">Rate this app</string>
+    <string name="rate_dialog_message">If you like this application, would you give a few seconds to score points? It won\'t take more than a few seconds. Thank you for your support!</string>
+    <string name="rate_dialog_ok">Rate</string>
+    <string name="rate_dialog_cancel">Maybe later</string>
+    <string name="rate_dialog_no">No</string>
+
+    <!-- SETTINGS -->
+    <string name="categoryTheme">Theme</string>
+    <string name="categoryBrowser">Browser</string>
+    <string name="categorySecurity">Security</string>
+    <string name="categoryAccessibility">Accessibility</string>
+    <string name="info_settings">Please restart the application to apply the settings.</string>
+    <string name="setting_sw1">Turn off JavaScript</string>
+    <string name="setting_sw2">Block images</string>
+    <string name="setting_sw3" translatable="false">MeraHyperBoost™</string>
+    <string name="setting_sw4">Privacy mode</string>
+    <string name="setting_sw5">Don\'t sleep screen</string>
+    <string name="setting_sw6">Desktop mode</string>
+    <string name="setting_sw7">Allow 3rd party cookies</string>
+    <string name="setting_sw8">Full screen mode</string>
+    <string name="setting_sw9">Mera Sound Balancer</string>
+    <string name="setting_sw10">Mera Color Enhancer</string>
+    <string name="setting_sw11">Single hand mode</string>
+    <string name="setting_sw12">Hide app top notifications</string>
+    <string name="setting_sw13">Block pop-ups</string>
+    <string name="setting_sw14">Recalling form data</string>
+    <string name="setting_sw15">Activate Amoled theme</string>
+    <string name="setting_sw16">Enable Chromium</string>
+    <string name="setting_sw17">Show zoom controls</string>
+    <string name="tips_title">Help center</string>
+    <string name="privacy_btn">Privacy Policy</string>
+    <string name="terms_btn">Terms of service</string>
+    <string name="about_btn">About app</string>
+    <string name="developer_title">Developer</string>
+    <string name="webkit_title" translatable="false">WebKit</string>
+    <string name="version_title">Version</string>
+
+    <!-- THEME -->
+    <string name="theme_title">Appearance settings</string>
+    <string name="theme_restart_title">Theme changed</string>
+    <string name="theme_message">Please select any application theme you want to use. Touch an empty space to cancel.</string>
+    <string name="theme_restart_message">If the theme change was detected, the changes will be applied when the application restarts. Restart the application now?</string>
+    <string name="theme_dark_btn">Dark mode</string>
+    <string name="theme_amoled" translatable="false">Amoled black</string>
+    <string name="theme_auto_btn">Auto mode</string>
+    <string name="theme_light_btn">Light mode</string>
+
+    <!-- CLEAR APP -->
+    <string name="clear_datas">Clear browsing and history data</string>
+    <string name="clear_datas2">Clear cookie and session data</string>
+    <string name="clear_cdatas">Cleaned</string>
+    <string name="clear_files">Clear data</string>
+    <string name="clear_files_title">It is recommended that you restart the browser after clearing the data.</string>
+    <string name="clear_form">Clear form data</string>
+    <string name="clear_history">Clear history</string>
+    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cookie">Clear cookies</string>
+    <string name="clear_setting">Reset settings to default</string>
+    <string name="title_cform">Form data cleared</string>
+    <string name="title_chistory">History has been cleared</string>
+    <string name="title_ccache">Cache cleared</string>
+    <string name="title_ccookie">Cookies cleared</string>
+    <string name="title_csetting">Application settings reset to default</string>
+
+    <!-- LOCK SCREEN -->
+    <string name="lockscreen_welcome">For security, please specify a password to be used in the application entry.</string>
+    <string name="lockscreen_created">The password was created. You can login</string>
+    <string name="lockscreen_pin_failed">Your password is incorrect, please try again</string>
+    <string name="lockscreen_fingerprint_failed">Fingerprint error</string>
+    <string name="lockscreen_pin_delete_msg">Are you sure you want to reset the password? This operation is persistent. A password must be created again on the home screen. Continue anyway?</string>
+    <string name="lockscreen_pin_delete">Reset Password</string>
+    <string name="lockscreen_pin_deleted">If your password has been successfully removed, you can re-enter the application to create a passcode.</string>
+
+    <!-- RESTART APP -->
+    <string name="restart_button">Restart</string>
+    <string name="restart_title">Restart?</string>
+    <string name="restart_message">Do you want to restart the application? Your current transactions are terminated.</string>
+
+    <!-- MERA SHOCK -->
+    <string name="shock_btn">Shock restart</string>
+    <string name="shock_title">You want to shock?</string>
+    <string name="shock_msg">The shock Restarter clears the browser\'s cache at maximum speed and restarts it. Should the browser be shocked now?</string>
+    <string name="shock_yes">Now with shock</string>
+    <string name="shock_notify">The browser was shocked and restarted</string>
+
+    <!-- URLS -->
+    <string name="appprivacy_url" translatable="false">https://aospstudio.org/web/privacyterms/en#privacy</string>
+    <string name="appterms_url" translatable="false">https://aospstudio.org/web/privacyterms/en#terms</string>
+
+</resources>
