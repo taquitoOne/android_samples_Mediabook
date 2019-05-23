@@ -122,6 +122,8 @@
                 <data android:host="www.twitter.com"/>
                 <data android:host="mobile.twitter.com"/>
                 <data android:host="www.tumblr.com"/>
+                <data android:host="pinterest.com"/>
+                <data android:host="www.pinterest.com"/>
                 <data android:host="www.linkedin.com"/>
                 <data android:host="workplace.m.facebook.com"/>
                 <data android:host="myspace.com"/>
@@ -136,6 +138,8 @@
                 <data android:host="wikipedia.org"/>
                 <data android:host="www.wikipedia.org"/>
                 <data android:host="m.wikipedia.org"/>
+                <data android:host="wattpad.com"/>
+                <data android:host="www.wattpad.com"/>
                 <data android:host="www.reddit.com"/>
                 <data android:host="medium.com"/>
                 <data android:host="ask.fm"/>
@@ -165,22 +169,6 @@
             android:name=".service.MPlayer"
             android:enabled="true"
             android:exported="false" />
-
-        <activity
-            android:name=".pages.AboutActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:alwaysRetainTaskState="true"
-            android:autoRemoveFromRecents="true"
-            android:clearTaskOnLaunch="true"
-            android:finishOnTaskLaunch="true"
-            android:fitsSystemWindows="true"
-            android:resizeableActivity="true"
-            android:label="@string/about_btn"
-            android:launchMode="singleTop"
-            android:parentActivityName=".MainHomeActivity"
-            android:theme="@style/MeraPureUI2About"
-            tools:targetApi="n">
-        </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
