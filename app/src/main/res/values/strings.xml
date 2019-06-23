@@ -32,10 +32,10 @@
 
     <!-- VERSIONS -->
     <string name="app_version" translatable="false">1.0.1000.10</string>
-    <string name="chromium_version" translatable="false">Chrome/73.0.3683.90 Mobile</string>
-    <string name="opr_version" translatable="false">OPR/52.1.2517.139570</string>
-    <string name="dsktp_chromium_version" translatable="false">Chrome/73.0.3683.86</string>
-    <string name="dsktp_opr_version" translatable="false">OPR/60.0.3255.84</string>
+    <string name="chromium_version" translatable="false">Chrome/74.0.3729.157 Mobile</string>
+    <string name="opr_version" translatable="false">OPR/53.0.2551.140548</string>
+    <string name="dsktp_chromium_version" translatable="false">Chrome/73.0.3683.103</string>
+    <string name="dsktp_opr_version" translatable="false">OPR/60.0.3255.170</string>
 
     <!-- SITE NAMES -->
     <string name="app_name_facebook" translatable="false">facebook</string>

@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA2" />
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -113,6 +114,8 @@
                 <data android:host="mtouch.facebook.com"/>
                 <data android:host="touch.facebook.com"/>
                 <data android:host="p.facebook.com"/>
+                <data android:host="m.me"/>
+                <data android:host="messenger.com"/>
                 <data android:host="ig.me"/>
                 <data android:host="instagram.com"/>
                 <data android:host="l.instagram.com"/>
@@ -179,10 +182,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"/>
         </provider>
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8284511799631720~7922492059"/>
 
         <meta-data
             android:name="android.allow_multiple_resumed_activities"

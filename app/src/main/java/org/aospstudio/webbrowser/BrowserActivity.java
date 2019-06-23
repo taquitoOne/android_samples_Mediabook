@@ -22,9 +22,9 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.media.audiofx.BassBoost;
 import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Build;
@@ -36,8 +36,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.CookieManager;
 import android.webkit.DownloadListener;
@@ -57,16 +55,17 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import org.aospstudio.webbrowser.components.*;
+import org.aospstudio.webbrowser.service.MPlayer;
 import org.aospstudio.webbrowser.ui.MeraSocial;
 import com.google.android.material.circularreveal.CircularRevealRelativeLayout;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class BrowserActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
+public class BrowserActivity extends AppCompatActivity {
 
     final Context context = this;
     private View mCustomView;
@@ -260,12 +259,7 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
                                 name = findViewById(R.id.name);
                                 name.setText(R.string.clear_files);
                             } else if (item.getItemId() == R.id.settings) {
-                                settings_screen.setVisibility(View.VISIBLE);
-                                close_bg.setBackground(getDrawable(R.drawable.round_arrow_back_24));
-                                settingscreen.setVisibility(View.VISIBLE);
-                                clearscreen.setVisibility(View.GONE);
-                                name = findViewById(R.id.name);
-                                name.setText(R.string.settings_btn);
+                                settingsMainShow();
                             } else if (item.getItemId() == R.id.normal_restart) {
                                 meraRestart();
                             } else if (item.getItemId() == R.id.quit) {
@@ -293,9 +287,7 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
             close_setting.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    settings_screen.setVisibility(View.GONE);
-                    clearscreen.setVisibility(View.GONE);
-                    settingscreen.setVisibility(View.VISIBLE);
+                    settingsMainHide();
                 }
             });
 
@@ -337,54 +329,100 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
             clear_datas1 = findViewById(R.id.clear_datas1);
             clear_datas2 = findViewById(R.id.clear_datas2);
 
-            themesetting.setOnCheckedChangeListener(this);
-            javascript.setOnCheckedChangeListener(this);
-            minimode.setOnCheckedChangeListener(this);
-            desktopmode.setOnCheckedChangeListener(this);
-
             theme_btn = findViewById(R.id.theme_btn);
             minimode_btn = findViewById(R.id.minimode_btn);
             desktopmode_btn = findViewById(R.id.desktopmode_btn);
 
+            themesetting.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(themesetting.isChecked()) {
+                        saveInSp("themesetting", themesetting.isChecked());
+                        themesetting.setChecked(true);
+                        MeraSocial.getInstance().setIsNightModeEnabled(true);
+                    } else{
+                        saveInSp("themesetting", themesetting.isChecked());
+                        themesetting.setChecked(false);
+                        MeraSocial.getInstance().setIsNightModeEnabled(false);
+                    }
+                }
+            });
+            javascript.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(javascript.isChecked()) {
+                        saveInSp("javascript", javascript.isChecked());
+                        javascript.setChecked(true);
+                        meraKit.setJavaScriptEnabled(false);
+                        meraWeb.reload();
+                    } else{
+                        saveInSp("javascript", javascript.isChecked());
+                        javascript.setChecked(false);
+                        meraKit.setJavaScriptEnabled(true);
+                        meraWeb.reload();
+                    }
+                }
+            });
+            minimode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(minimode.isChecked()) {
+                        saveInSp("minimode", minimode.isChecked());
+                        minimode.setChecked(true);
+                        appheader.setVisibility(View.VISIBLE);
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                    } else{
+                        saveInSp("minimode", minimode.isChecked());
+                        minimode.setChecked(false);
+                        appheader.setVisibility(View.GONE);
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
+                    }
+                }
+            });
+            desktopmode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(desktopmode.isChecked()) {
+                        saveInSp("desktopmode", desktopmode.isChecked());
+                        desktopmode.setChecked(true);
+                        meraKit.setUseWideViewPort(true);
+                        meraKit.setLoadWithOverviewMode(true);
+                        meraWeb.clearCache(true);
+                        meraWeb.clearHistory();
+                        meraKit.setUserAgentString("Mozilla/5.0 (X11; CrOS x86_64) AppleWebKit/537.36 (KHTML, like Gecko) " + getString(R.string.dsktp_chromium_version) + " Safari/537.36 " + getString(R.string.dsktp_opr_version));
+                        meraWeb.reload();
+                    } else{
+                        saveInSp("desktopmode", desktopmode.isChecked());
+                        desktopmode.setChecked(false);
+                        meraKit.setUseWideViewPort(true);
+                        meraKit.setLoadWithOverviewMode(true);
+                        meraWeb.clearCache(true);
+                        meraWeb.clearHistory();
+                        meraKit.setUserAgentString("Mozilla/5.0 (Linux; Android " + Build.VERSION.RELEASE + "; " + Build.MODEL + " Build/" + Build.ID + ") AppleWebKit/537.36 (KHTML, like Gecko) " + getString(R.string.chromium_version) + " Safari/537.36 " + getString(R.string.opr_version));
+                        meraWeb.reload();
+                    }
+                }
+            });
+
             if (getFromSP("themesetting")) {
                 themesetting.setChecked(true);
-                MeraSocial.getInstance().setIsNightModeEnabled(true);
             } else {
                 themesetting.setChecked(false);
-                MeraSocial.getInstance().setIsNightModeEnabled(false);
             }
             if (getFromSP("javascript")) {
                 javascript.setChecked(true);
-                meraKit.setJavaScriptEnabled(false);
-                meraWeb.reload();
             } else {
                 javascript.setChecked(false);
-                meraKit.setJavaScriptEnabled(true);
-                meraWeb.reload();
             }
             if (getFromSP("minimode")) {
                 minimode.setChecked(true);
-                appheader.setVisibility(View.VISIBLE);
-                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             } else {
                 minimode.setChecked(false);
-                appheader.setVisibility(View.GONE);
-                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
             }
             if (getFromSP("desktopmode")) {
                 desktopmode.setChecked(true);
-                meraKit.setUseWideViewPort(true);
-                meraKit.setLoadWithOverviewMode(true);
-                meraWeb.clearCache(true);
-                meraKit.setUserAgentString("Mozilla/5.0 (X11; CrOS x86_64) AppleWebKit/537.36 (KHTML, like Gecko) " + getString(R.string.dsktp_chromium_version) + " Safari/537.36 " + getString(R.string.dsktp_opr_version));
-                meraWeb.reload();
             } else {
                 desktopmode.setChecked(false);
-                meraKit.setUseWideViewPort(true);
-                meraKit.setLoadWithOverviewMode(true);
-                meraWeb.clearCache(true);
-                meraKit.setUserAgentString("Mozilla/5.0 (Linux; Android " + Build.VERSION.RELEASE + "; " + Build.MODEL + " Build/" + Build.ID + ") AppleWebKit/537.36 (KHTML, like Gecko) " + getString(R.string.chromium_version) + " Safari/537.36 " + getString(R.string.opr_version));
-                meraWeb.reload();
             }
 
             clear_datas1.setOnClickListener(new View.OnClickListener() {
@@ -395,7 +433,15 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
                     meraWeb.clearCache(true);
                     meraWeb.clearFormData();
                     meraWeb.clearHistory();
-                    Toast.makeText(getApplicationContext(), getString(R.string.clear_cdatas), Toast.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar
+                            .make(main_app, getString(R.string.clear_cdatas), Snackbar.LENGTH_LONG)
+                            .setAction(getString(R.string.notify_del), new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    dismissSnackbar();
+                                }
+                            });
+                    snackbar.show();
                 }
             });
 
@@ -404,7 +450,15 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
                 public void onClick(View v) {
                     clearCookies(context);
                     WebViewDatabase.getInstance(BrowserActivity.this).clearFormData();
-                    Toast.makeText(getApplicationContext(), getString(R.string.clear_cdatas), Toast.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar
+                            .make(main_app, getString(R.string.clear_cdatas), Snackbar.LENGTH_LONG)
+                            .setAction(getString(R.string.notify_del), new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    dismissSnackbar();
+                                }
+                            });
+                    snackbar.show();
                 }
             });
 
@@ -415,14 +469,6 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
                     settingscreen.setVisibility(View.GONE);
                     clearscreen.setVisibility(View.VISIBLE);
                     name.setText(R.string.clear_files);
-                }
-            });
-
-            restart = findViewById(R.id.restart);
-            restart.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    meraRestart();
                 }
             });
 
@@ -454,24 +500,6 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
         }
     }
 
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        switch (buttonView.getId()) {
-            case R.id.themesetting:
-                saveInSp("themesetting", isChecked);
-                break;
-            case R.id.javascript:
-                saveInSp("javascript", isChecked);
-                break;
-            case R.id.minimode:
-                saveInSp("minimode", isChecked);
-                break;
-            case R.id.desktopmode:
-                saveInSp("desktopmode", isChecked);
-                break;
-        }
-    }
-
     public void saveInSp(String key, boolean value){
         prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         editor = prefs.edit();
@@ -482,6 +510,29 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
     public boolean getFromSP(String key){
         prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         return prefs.getBoolean(key, false);
+    }
+
+    public void settingsMainShow() {
+        main_app.setVisibility(View.GONE);
+        settings_screen.setVisibility(View.VISIBLE);
+        close_bg.setBackground(getDrawable(R.drawable.round_arrow_back_24));
+        settingscreen.setVisibility(View.VISIBLE);
+        clearscreen.setVisibility(View.GONE);
+        name = findViewById(R.id.name);
+        name.setText(R.string.settings_btn);
+    }
+
+    public void settingsMainHide() {
+        main_app.setVisibility(View.VISIBLE);
+        settings_screen.setVisibility(View.GONE);
+        clearscreen.setVisibility(View.GONE);
+        settingscreen.setVisibility(View.VISIBLE);
+    }
+
+    public void dismissSnackbar() {
+        Snackbar snackbar = Snackbar
+                .make(main_app, "", Snackbar.LENGTH_LONG);
+        snackbar.dismiss();
     }
 
     private class OperaClient extends WebViewClient {
@@ -598,18 +649,21 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
                             notify_main.setVisibility(View.VISIBLE);
                         }
                 }
-                else if(url.startsWith("intent://")
-                        ||url.startsWith("app://")
-                        ||url.startsWith("file://")
-                        ||url.startsWith("market://")
+                else if(url.startsWith("market://")
                         ||url.startsWith("linkedin://")
                         ||url.startsWith("fb-messenger://")
+                        ||url.startsWith("sharesample://")
                         ||url.startsWith("skype://")
                         ||url.startsWith("whatsapp://")
+                        ||url.startsWith("twitter://")
                         ||url.startsWith("tg://")
                         ||url.startsWith("tel:")
                         ||url.startsWith("sms:")
-                        ||url.startsWith("mailto:"))
+                        ||url.startsWith("mailto:")
+                        ||url.startsWith("googledrive://")
+                        ||url.startsWith("https://m.me/")
+                        ||url.startsWith("https://aospstudio.org/")
+                        ||url.startsWith("http://aospstudio.org"))
                     try{
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
@@ -619,6 +673,16 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
                     catch (ActivityNotFoundException e) {
                         notifyText.setText(R.string.other_links_error_title);
                         notify_main.setVisibility(View.VISIBLE);
+                    }
+                else if(url.contains("intent://"))
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                        return true;
+                    } catch (ActivityNotFoundException e){
+                        notifyText.setText(R.string.other_links_error_title);
+                        notify_screen.setVisibility(View.VISIBLE);
                     }
                 else{
                     view.loadUrl(url);
@@ -644,65 +708,50 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
     private class OperaChromeClient extends WebChromeClient {
         @Override
         public void onPermissionRequest(final PermissionRequest request) {
-            request.grant(request.getResources());
-        }
-        private Activity mActivity = BrowserActivity.this;
-        private CustomViewCallback mCustomViewCallback;
-        private FrameLayout mFullscreenContainer;
-        private final FrameLayout.LayoutParams COVER_SCREEN_PARAMS = new FrameLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-
-        @Override
-        public void onShowCustomView(View view, CustomViewCallback callback) {
-            if (mCustomView != null) {
-                callback.onCustomViewHidden();
-                return;
+            if (Build.VERSION_CODES.Q >= Build.VERSION_CODES.LOLLIPOP) {
+                request.grant(request.getResources());
             }
-
-            main_app.setVisibility(View.GONE);
-            toolbar_web.setVisibility(View.GONE);
-            Toast.makeText(context, R.string.close_fullscreen, Toast.LENGTH_LONG).show();
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
-            FrameLayout decor = (FrameLayout) mActivity.getWindow().getDecorView();
-            mFullscreenContainer = new FrameLayout(mActivity);
-            mFullscreenContainer.addView(view, COVER_SCREEN_PARAMS);
-            decor.addView(mFullscreenContainer, COVER_SCREEN_PARAMS);
-            mCustomView = view;
-            setFullscreen(true);
-            mCustomViewCallback = callback;
-            super.onShowCustomView(view, callback);
         }
 
-        @Override
-        public void onHideCustomView() {
+        private View mCustomView;
+        private WebChromeClient.CustomViewCallback mCustomViewCallback;
+        protected FrameLayout mFullscreenContainer;
+        private int mOriginalOrientation;
+        private int mOriginalSystemUiVisibility;
+
+        public Bitmap getDefaultVideoPoster() {
             if (mCustomView == null) {
-                return;
+                return null;
             }
+            return BitmapFactory.decodeResource(getApplicationContext().getResources(), 2130837573);
+        }
+
+        public void onHideCustomView() {
             main_app.setVisibility(View.VISIBLE);
             toolbar_web.setVisibility(View.VISIBLE);
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
-            setFullscreen(false);
-            FrameLayout decor = (FrameLayout) mActivity.getWindow().getDecorView();
-            decor.removeView(mFullscreenContainer);
-            mFullscreenContainer = null;
-            mCustomView = null;
-            mCustomViewCallback.onCustomViewHidden();
+            ((FrameLayout)getWindow().getDecorView()).removeView(this.mCustomView);
+            this.mCustomView = null;
+            getWindow().getDecorView().setSystemUiVisibility(this.mOriginalSystemUiVisibility);
+            setRequestedOrientation(this.mOriginalOrientation);
+            this.mCustomViewCallback.onCustomViewHidden();
+            this.mCustomViewCallback = null;
         }
 
-        private void setFullscreen(boolean enabled) {
-            Window win = mActivity.getWindow();
-            WindowManager.LayoutParams winParams = win.getAttributes();
-            final int bits = WindowManager.LayoutParams.FLAG_FULLSCREEN;
-            if (enabled) {
-                winParams.flags |= bits;
-
-            } else {
-                winParams.flags &= ~bits;
-                if (mCustomView != null) {
-                    mCustomView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
-                }
+        public void onShowCustomView(View paramView, WebChromeClient.CustomViewCallback paramCustomViewCallback) {
+            if (this.mCustomView != null) {
+                onHideCustomView();
+                return;
             }
-            win.setAttributes(winParams);
+            main_app.setVisibility(View.GONE);
+            toolbar_web.setVisibility(View.GONE);
+            Toast.makeText(context, getString(R.string.close_fullscreen), Toast.LENGTH_LONG).show();
+            this.mCustomView = paramView;
+            this.mOriginalSystemUiVisibility = getWindow().getDecorView().getSystemUiVisibility();
+            this.mOriginalOrientation = getRequestedOrientation();
+            this.mCustomViewCallback = paramCustomViewCallback;
+            ((FrameLayout)getWindow().getDecorView()).addView(this.mCustomView, new FrameLayout.LayoutParams(-1, -1));
+            getWindow().getDecorView().setSystemUiVisibility(3846);
+            mCustomView.setBackgroundColor(getResources().getColor(android.R.color.black));
         }
 
         public boolean onShowFileChooser(WebView view, ValueCallback<Uri[]> filePath, FileChooserParams fileChooserParams) {
@@ -801,29 +850,6 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
         startActivity(Intent.createChooser(shareIntent, getString(R.string.share_url)));
     }
 
-    private void meraBassBooster() {
-        BassBoost bassBoost = new BassBoost(0,0);
-        bassBoost.setStrength((short) 1000);
-        bassBoost.setEnabled(true);
-        mediaplayer.attachAuxEffect(bassBoost.getId());
-        mediaplayer.setAuxEffectSendLevel(1.0f);
-        try {
-            mediaplayer.prepare();
-        } catch (IllegalStateException | IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void pauseVideo() {
-        try {
-            Class.forName("android.webkit.WebView")
-                    .getMethod("onPause", (Class[]) null)
-                    .invoke(meraWeb, (Object[]) null);
-
-        } catch(ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException cnfe) {
-        }
-    }
-
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -832,6 +858,14 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
     @Override
     protected void onRestoreInstanceState(Bundle state) {
         super.onRestoreInstanceState(state);
+    }
+
+    public void startService(View view) {
+        startService(new Intent(this, MPlayer.class));
+    }
+
+    public void stopService(View view) {
+        stopService(new Intent(this, MPlayer.class));
     }
 
     @Override
@@ -848,7 +882,6 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
         if (meraWeb != null) {
             meraWeb.onPause();
         }
-        pauseVideo();
         super.onPause();
     }
 
@@ -930,17 +963,11 @@ public class BrowserActivity extends AppCompatActivity implements CompoundButton
     public void onBackPressed() {
         if (meraWeb.canGoBack()) {
             meraWeb.goBack();
-            settings_screen.setVisibility(View.GONE);
-            clearscreen.setVisibility(View.GONE);
-            settingscreen.setVisibility(View.VISIBLE);
+            mCustomView = null;
+            settingsMainHide();
         } else {
-            settings_screen.setVisibility(View.GONE);
-            clearscreen.setVisibility(View.GONE);
-            settingscreen.setVisibility(View.VISIBLE);
+            settingsMainHide();
         }
-        settings_screen.setVisibility(View.GONE);
-        clearscreen.setVisibility(View.GONE);
-        settingscreen.setVisibility(View.VISIBLE);
     }
 
     private void meraQuit() {

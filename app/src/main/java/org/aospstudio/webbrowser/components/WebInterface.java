@@ -16,17 +16,18 @@ public class WebInterface {
 
     @JavascriptInterface
     public void playSound(){
+        meraWeb.setSoundEffectsEnabled(true);
         meraWeb.playSoundEffect(0);
     }
 
     @JavascriptInterface
     public void playSound(String toast) {
-        Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext, toast, Toast.LENGTH_LONG).show();
     }
 
     @JavascriptInterface
     public void pauseSound(String toast) {
-        Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext, toast, Toast.LENGTH_LONG).show();
     }
 
     @JavascriptInterface
@@ -36,7 +37,7 @@ public class WebInterface {
 
     @JavascriptInterface
     public void showAndroidVersion(String versionName) {
-        Toast.makeText(mContext, versionName, Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext, versionName, Toast.LENGTH_LONG).show();
     }
 
     /** Show BrowserActivity toast from the web page */
