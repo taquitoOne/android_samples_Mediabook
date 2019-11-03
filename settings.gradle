@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='android_samples_MeraSocial'
+rootProject.name='android_packages_MeraSocial'

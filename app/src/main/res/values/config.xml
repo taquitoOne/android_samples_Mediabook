@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <bool name="config_supportSpeakerNearUltrasound">true</bool>
-    <integer name="config_soundEffectVolumeDb">136</integer>
+    <bool name="buypro_btn_visible">false</bool>
 </resources>

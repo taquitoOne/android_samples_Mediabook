@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorBackground"
+        android:elevation="@dimen/toolbar_elevation"
+        android:minHeight="56dp"
+        app:menu="@menu/v6_toolbar_home"
+        app:title="@string/app_name" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/homeNested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adsLayout"
+        android:layout_below="@id/toolbar_home">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/facebook"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/facebook_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_facebook"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/messenger"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/facebook"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/messenger_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_messenger"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/instagram"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/messenger"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/instagram_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_instagram"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/direct"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/instagram"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/igdirect_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_igdirect"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/twitter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/direct"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/twitter_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_twitter"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tumblr"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/twitter"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/tumblr_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_tumblr"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pinterest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/tumblr"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/pinterest_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_pinterest"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/linkedin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/pinterest"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/linkedin_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_linkedin"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/workplace"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/linkedin"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/workplace_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_workplace"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/myspace"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/workplace"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/myspace_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_myspace"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/flickr"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/myspace"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/flickr_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_flickr"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/periscope"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/flickr"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/periscope_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_periscope"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/vk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/periscope"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/vk_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_vk"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/meetup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/vk"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/meetup_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_meetup"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/weibo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/meetup"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/weibo_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_weibo"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/badoo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/weibo"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/badoo_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_badoo"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/twoo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/badoo"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/twoo_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_twoo"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/quora"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/twoo"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/quora_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_quora"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/wikipedia"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/quora"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/wikipedia_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_wiki"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/wattpad"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/wikipedia"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/wattpad_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_wattpad"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reddit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/wattpad"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/reddit_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_reddit"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/medium"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/reddit"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/medium_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_medium"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/askfm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/medium"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/askfm_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_askfm"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/livejournal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/askfm"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/livejournal_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_livejournal"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/spotify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/livejournal"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/spotify_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_spotify"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ytmusic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/spotify"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ytmusic_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_ytmusic"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/soundcloud"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/ytmusic"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/soundcloud_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_soundcloud"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/lastfm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/soundcloud"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/lastfm_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_lastfm"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/twitch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/lastfm"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/twitch_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_twitch"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dlive"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/twitch"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/dlive_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_dlive"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dailymotion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/dlive"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/dailymotion_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_dailymotion"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/youtube"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@id/dailymotion"
+                android:layout_marginBottom="4dp"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/youtube_ico"
+                android:drawablePadding="@dimen/drawable_start"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:paddingStart="@dimen/menu_start"
+                android:text="@string/app_name_youtube"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="@dimen/icon_text_size"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/adsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            layout="@layout/v6_bottom_home_adview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/editapps"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adsLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:visibility="visible"
+        app:backgroundTint="@color/colorPrimary"
+        app:icon="@drawable/mpui4_edit_ico"
+        app:iconTint="@color/colorToolbar"
+        app:rippleColor="@color/colorAccentRipple" />
+
+</RelativeLayout>

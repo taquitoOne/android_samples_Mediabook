@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/errorViewImage"
+            android:layout_width="126dp"
+            android:layout_height="126dp"
+            android:layout_marginStart="106dp"
+            android:layout_marginEnd="106dp"
+            app:srcCompat="@drawable/not_connected" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/errorTxt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title1"
+            android:textAlignment="center"
+            android:textColor="@color/settings_text_color"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/errorTxt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title2"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/errorTxt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="error_code"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/retry_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/colorToolbar" />
+
+    </LinearLayout>
+
+</RelativeLayout>

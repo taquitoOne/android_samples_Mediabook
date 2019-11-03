@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/browser_screen"
+    android:background="@color/colorPrimary">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorBackground"
+        android:elevation="@dimen/toolbar_elevation"
+        android:minHeight="56dp"
+        app:menu="@menu/v6_customtabs_menu"
+        app:navigationIcon="@drawable/ic_close_black_24dp"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <com.aospstudio.android.apps.mediabook.components.MeraWeb
+        android:id="@+id/meraWeb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:theme="@style/MeraPureUI4"
+        tools:targetApi="q" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/toolbar"
+        android:indeterminate="false"
+        android:max="100"
+        android:layout_marginTop="-2dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

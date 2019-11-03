@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="MeraPureUI4" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="isMaterialTheme">true</item>
+        <item name="useMaterialThemeColors">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+        <item name="materialAlertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="alertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:alertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:datePickerDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:timePickerDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="popupMenuStyle">@style/MeraPureUI4PopupMenu</item>
+    </style>
+
+    <style name="MeraPureUI4Activity" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:actionBarTheme">@style/MeraPureUI4Activity.ActionBar</item>
+        <item name="android:homeAsUpIndicator">@drawable/round_arrow_back_24</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="materialAlertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="alertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:alertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="popupMenuStyle">@style/MeraPureUI4PopupMenu</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="MeraPureUI4Activity.ActionBar" parent="Theme.MaterialComponents.Light">
+        <item name="android:homeAsUpIndicator">@drawable/round_arrow_back_24</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:colorControlNormal">#ffffff</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+    </style>
+
+    <style name="MeraPureUI4Settings" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="materialAlertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="alertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:alertDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:datePickerDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:timePickerDialogTheme">@style/MeraPureUI4Dialog</item>
+        <item name="android:fontFamily">@font/rubikregular</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="p">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="p">true</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <item name="popupMenuStyle">@style/MeraPureUI4PopupMenu</item>
+        <item name="android:contextPopupMenuStyle" tools:targetApi="n">@style/MeraPureUI4PopupMenu</item>
+        <item name="checkboxStyle">@style/Widget.MaterialComponents.CompoundButton.CheckBox</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+</resources>

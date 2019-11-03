@@ -1,1 +1,0 @@
-# android_samples_MeraSocial

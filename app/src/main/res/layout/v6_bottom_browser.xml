@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_browser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorBackground"
+        android:elevation="@dimen/toolbar_elevation"
+        android:minHeight="@dimen/toolbar_size"
+        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+        app:menu="@menu/v6_toolbar_browser"
+        app:title="@string/bottom_browser" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_browser">
+
+        <com.aospstudio.android.apps.mediabook.components.MeraWeb
+            android:id="@+id/meraWeb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="true"
+            android:backgroundTint="@color/color_background"
+            android:importantForAutofill="yes"
+            android:soundEffectsEnabled="true"
+            android:theme="@style/MeraPureUI4"
+            tools:targetApi="q" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/pageError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_browser"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/v6_bottom_browser_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/browserPageStarting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_browser">
+
+        <include
+            layout="@layout/v6_bottom_browser_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBarV6"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/toolbar_browser"
+        android:indeterminate="false"
+        android:max="100"
+        android:layout_marginTop="-2dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/meraWebUp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/v6_button_top" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

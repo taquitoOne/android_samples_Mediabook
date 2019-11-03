@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_clear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorBackground"
+        android:elevation="@dimen/toolbar_elevation"
+        android:minHeight="56dp"
+        app:navigationIcon="@drawable/ic_close_black_24dp"
+        app:title="@string/clear_files" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/clear_datas1"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/toolbar_clear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/ripple_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="@dimen/setting_sheet_start"
+        android:paddingTop="@dimen/setting_sheet_top"
+        android:paddingEnd="@dimen/clear_end"
+        android:paddingBottom="@dimen/setting_sheet_bottom"
+        android:text="@string/clear_datas"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/clear_datas2"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/clear_datas1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/ripple_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="@dimen/setting_sheet_start"
+        android:paddingTop="@dimen/setting_sheet_top"
+        android:paddingEnd="@dimen/clear_end"
+        android:paddingBottom="@dimen/setting_sheet_bottom"
+        android:text="@string/clear_datas2"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/settings_text_color"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clear_datas2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/setting_sheet_bottom"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="@dimen/setting_sheet_start"
+        android:paddingTop="@dimen/setting_sheet_top"
+        android:paddingEnd="@dimen/clear_end"
+        android:paddingBottom="@dimen/setting_sheet_bottom"
+        android:text="@string/clear_files_title"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/settings_info_color"
+        android:textSize="15sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+</RelativeLayout>

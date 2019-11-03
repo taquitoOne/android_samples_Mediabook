@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/mpui4_bottom_home"
+        android:title="@string/bottom_home" />
+
+    <item
+        android:id="@+id/browser"
+        android:icon="@drawable/mpui4_bottom_browser"
+        android:title="@string/bottom_browser" />
+
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/mpui4_bottom_more"
+        android:title="@string/bottom_more" />
+
+</menu>

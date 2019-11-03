@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleEditapps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sheet_padding"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/hide_apps"
+        android:textColor="@color/colorToolbar"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleEditapps"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="22dp"
+            android:paddingBottom="14dp"
+            tools:ignore="RtlSymmetry">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckfacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_facebook"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckmessenger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckfacebook"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_messenger"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckinstagram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckmessenger"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_instagram"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckdirect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckinstagram"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_igdirect"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chcktwitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckdirect"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_twitter"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chcktumblr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chcktwitter"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_tumblr"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckpinterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chcktumblr"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_pinterest"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chcklinkedin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckpinterest"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_linkedin"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckworkplace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chcklinkedin"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_workplace"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckmyspace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckworkplace"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_myspace"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckflickr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckmyspace"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_flickr"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckperiscope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckflickr"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_periscope"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckvk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckperiscope"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_vk"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckmeetup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckvk"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_meetup"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckweibo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckmeetup"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_weibo"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckbadoo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckweibo"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_badoo"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chcktwoo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckbadoo"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_twoo"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckquora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chcktwoo"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_quora"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckwiki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckquora"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_wiki"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckwattpad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckwiki"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_wattpad"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckreddit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckwattpad"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_reddit"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckmedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckreddit"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_medium"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckaskfm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckmedium"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_askfm"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chcklivejournal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckaskfm"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_livejournal"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckspotify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chcklivejournal"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_spotify"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckytmusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckspotify"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_ytmusic"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chcksoundcloud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckytmusic"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_soundcloud"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chcklastfm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chcksoundcloud"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_lastfm"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chcktwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chcklastfm"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_twitch"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckdlive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chcktwitch"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_dlive"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckdailymotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckdlive"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_dailymotion"
+                android:textSize="@dimen/icon_text_size" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/chckyoutube"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chckdailymotion"
+                android:paddingStart="24dp"
+                android:paddingTop="@dimen/setting_top"
+                android:paddingBottom="@dimen/setting_bottom"
+                android:text="@string/app_name_youtube"
+                android:textSize="@dimen/icon_text_size" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

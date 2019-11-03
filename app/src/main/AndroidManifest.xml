@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.aospstudio.webbrowser">
+    package="com.aospstudio.android.apps.mediabook">
 
     <uses-permission android:name="android.webkit.PermissionRequest" />
+    <uses-permission-sdk-23 android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.CAMERA2" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -19,87 +19,37 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
-    <uses-permission android:name="com.android.vending.p2p.APP_INSTALL_API"/>
-    <uses-permission-sdk-23 android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
-    <uses-feature android:glEsVersion="0x00010000" android:required="false" />
-    <uses-feature android:name="android.hardware.telephony" android:required="false" />
-    <uses-feature android:name="android.software.midi" android:required="false" />
     <uses-feature android:name="android.software.webview" android:required="true" />
-    <uses-feature android:name="android.hardware.audio.low_latency" android:required="false" />
-    <uses-feature android:name="android.hardware.audio.output" android:required="false" />
-    <uses-feature android:name="android.hardware.audio.pro" android:required="false" />
-    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
-    <uses-feature android:name="android.hardware.camera" android:required="false"/>
-    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
-    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
-    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
     <uses-feature android:name="android.hardware.location.network" android:required="false"/>
     <uses-feature android:name="android.hardware.location" android:required="false"/>
     <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
-    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true" />
 
     <application
-        android:name=".ui.MeraSocial"
-        android:alwaysRetainTaskState="true"
+        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
-        android:fullBackupOnly="true"
-        android:fullBackupContent="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:restoreAnyVersion="true"
         android:hardwareAccelerated="true"
-        android:supportsRtl="true"
-        android:taskAffinity=""
         android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:theme="@style/MeraPureUI2Activity"
+        android:supportsRtl="true"
+        android:theme="@style/MeraPureUI4"
+        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:label="@string/app_name"
-        tools:targetApi="n"
+        tools:targetApi="q"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".SplashActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:label="@string/app_name"
-            android:launchMode="standard"
+            android:name=".MediabookHomeActivity"
             android:fitsSystemWindows="true"
-            android:resizeableActivity="true"
-            android:theme="@style/MeraPureUI2"
-            tools:targetApi="n">
+            tools:targetApi="q">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".MainHomeActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:alwaysRetainTaskState="true"
-            android:label="@string/app_name"
-            android:launchMode="singleTop"
-            android:fitsSystemWindows="true"
-            android:resizeableActivity="true"
-            android:theme="@style/MeraPureUI2"
-            tools:targetApi="n">
-        </activity>
-
-        <activity
-            android:name=".BrowserActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
-            android:taskAffinity=""
-            android:alwaysRetainTaskState="true"
-            android:persistableMode="persistNever"
-            android:label="@string/app_name"
-            android:autoRemoveFromRecents="false"
-            android:parentActivityName=".MainHomeActivity"
-            android:fitsSystemWindows="true"
-            android:resizeableActivity="true"
-            android:theme="@style/MeraPureUI2"
-            tools:targetApi="n">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -128,10 +78,15 @@
                 <data android:host="pinterest.com"/>
                 <data android:host="www.pinterest.com"/>
                 <data android:host="www.linkedin.com"/>
+                <data android:host="workplace.com" />
+                <data android:host="work.workplace.com"/>
                 <data android:host="workplace.m.facebook.com"/>
                 <data android:host="myspace.com"/>
                 <data android:host="www.flickr.com"/>
                 <data android:host="www.pscp.tv"/>
+                <data android:host="pscp.tv" />
+                <data android:host="vk.com"/>
+                <data android:host="m.vk.com"/>
                 <data android:host="badoo.com"/>
                 <data android:host="www.twoo.com"/>
                 <data android:host="www.meetup.com"/>
@@ -147,15 +102,18 @@
                 <data android:host="medium.com"/>
                 <data android:host="ask.fm"/>
                 <data android:host="www.livejournal.com"/>
+                <data android:host="music.youtu.be"/>
+                <data android:host="music.youtube.com"/>
+                <data android:host="music.youtube"/>
+                <data android:host="m.music.youtube.com"/>
                 <data android:host="soundcloud.com"/>
                 <data android:host="www.soundcloud.com"/>
                 <data android:host="m.soundcloud.com"/>
                 <data android:host="www.last.fm"/>
-                <data android:host="vk.com"/>
-                <data android:host="m.vk.com"/>
                 <data android:host="twitch.tv"/>
                 <data android:host="www.twitch.tv"/>
                 <data android:host="m.twitch.tv"/>
+                <data android:host="dlive.tv"/>
                 <data android:host="dai.ly"/>
                 <data android:host="dailymotion.com"/>
                 <data android:host="www.dailymotion.com"/>
@@ -163,15 +121,42 @@
                 <data android:host="youtube.com"/>
                 <data android:host="www.youtube.com"/>
                 <data android:host="m.youtube.com"/>
-                <data android:pathPattern="/.*" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MediabookActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:fitsSystemWindows="true"
+            android:launchMode="singleTop"
+            tools:targetApi="q">
+        </activity>
+
+        <activity
+            android:name=".customtabs.CustomTabActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:fitsSystemWindows="true"
+            android:parentActivityName=".MediabookActivity"
+            tools:targetApi="q">
+        </activity>
+
+        <activity
+            android:name=".pages.BuyActivity"
+            android:label="@string/buy_title"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+            android:fitsSystemWindows="true"
+            android:parentActivityName=".MediabookActivity"
+            tools:targetApi="q">
         </activity>
 
         <service
             android:label="MeraSoundService"
-            android:name=".service.MPlayer"
+            android:name=".service.BackgroundService"
             android:enabled="true"
-            android:exported="false" />
+            android:exported="true"
+            tools:ignore="ExportedService" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -189,7 +174,7 @@
 
         <meta-data
             android:name="android.webkit.WebView.EnableSafeBrowsing"
-            android:value="false" />
+            android:value="true" />
 
         <meta-data
             android:name="android.webkit.WebView.MetricsOptOut"

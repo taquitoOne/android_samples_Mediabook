@@ -1,19 +1,44 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <dimen name="design_navigation_icon_size" tools:override="true">36dp</dimen>
-    <dimen name="design_navigation_separator_vertical_padding" tools:override="true">12dp</dimen>
+<resources>
 
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="nav_header_vertical_spacing">8dp</dimen>
-    <dimen name="nav_header_height">176dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+    <!-- NAVIGATION -->
+    <dimen name="navigation_padding">16dp</dimen>
 
-    <dimen name="normal_gap">16dp</dimen>
-    <dimen name="small_gap">8dp</dimen>
-    <dimen name="foreground_radius">16dp</dimen>
-    <dimen name="menu_radius">8dp</dimen>
-    <dimen name="big_gap">32dp</dimen>
+    <!-- TOOLBARS -->
+    <dimen name="toolbar_size">56dp</dimen>
+    <dimen name="toolbar_elevation">2dp</dimen>
 
-    <dimen name="icon_w">32dp</dimen>
-    <dimen name="icon_h">32dp</dimen>
+    <!-- MENU BUTTON -->
+    <dimen name="drawable_start">12dp</dimen>
+    <dimen name="menu_start">14dp</dimen>
+    <dimen name="button_height">56dp</dimen>
+
+    <!-- ICON -->
+    <dimen name="icon_text_size">17sp</dimen>
+    <dimen name="icon_w">34dp</dimen>
+    <dimen name="icon_h">34dp</dimen>
+
+    <!-- SETTINGS -->
+    <dimen name="setting_start">70dp</dimen>
+    <dimen name="setting_end">66dp</dimen>
+    <dimen name="setting_top">16dp</dimen>
+    <dimen name="setting_bottom">16dp</dimen>
+    <dimen name="setting_about_end">20dp</dimen>
+    <dimen name="setting_sheet_start">72dp</dimen>
+    <dimen name="setting_sheet_end">22dp</dimen>
+    <dimen name="setting_sheet_top">16dp</dimen>
+    <dimen name="setting_sheet_bottom">16dp</dimen>
+    <dimen name="setting_sheet_about_end">20dp</dimen>
+    <dimen name="clear_end">20dp</dimen>
+
+    <!-- CATEGORY -->
+    <dimen name="category_start">70dp</dimen>
+    <dimen name="category_top">18dp</dimen>
+    <dimen name="category_bottom">10dp</dimen>
+    <dimen name="category_sheet_start">72dp</dimen>
+    <dimen name="category_sheet_top">18dp</dimen>
+    <dimen name="category_sheet_bottom">10dp</dimen>
+
+    <!-- DIALOGS -->
+    <dimen name="sheet_padding">26dp</dimen>
+
 </resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="flow_horizontalSeparator"/>
+    <attr name="flow_verticalSeparator"/>
+    <attr name="motionProgress"/>
+    <attr name="waveDecay"/>
+    <attr name="motionPathRotate"/>
+    <attr name="duration"/>
+    <attr name="corner_radius"/>
+    <attr name="top_left_corner_radius"/>
+    <attr name="top_right_corner_radius"/>
+    <attr name="bottom_right_corner_radius"/>
+    <attr name="bottom_left_corner_radius"/>
+</resources>

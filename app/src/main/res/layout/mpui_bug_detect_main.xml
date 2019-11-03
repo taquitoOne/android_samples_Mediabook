@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bug_screen_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/mpui_buginfo_ico"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="12dp"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingStart="20dp"
+        android:text="Application info"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bug_screen_close"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/mpui_bugclose_ico"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="12dp"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingStart="20dp"
+        android:text="Close application"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bug_screen_copy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/mpui_bugcopy_ico"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="12dp"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingStart="20dp"
+        android:text="Copy error code"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bug_screen_send"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:drawableStart="@drawable/mpui_bugsend_ico"
+        android:drawableTint="@color/colorAccent"
+        android:drawablePadding="12dp"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingStart="20dp"
+        android:text="Send bug report"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry" />
+
+</LinearLayout>

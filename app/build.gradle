@@ -2,14 +2,15 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion = 29
-    buildToolsVersion = '29.0.0 rc3'
+    buildToolsVersion = '29.0.2'
     defaultConfig {
-        applicationId "org.aospstudio.merasocial"
-        minSdkVersion 21
+        applicationId "org.aospstudio.mediabook"
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0.1000.10"
+        versionName "1.0.1000"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         debug {
@@ -21,9 +22,11 @@ android {
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility = '1.8'
         targetCompatibility = '1.8'
     }
+
 }
 allprojects {
     repositories {
@@ -37,7 +40,8 @@ allprojects {
 }
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'com.jcminarro:RoundKornerLayouts:0.4.0'
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.webkit:webkit:1.1.0-rc01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/incognito"
+        android:icon="@drawable/incognito_small"
+        android:title="@string/setting_sw4"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/share"
+        android:title="@string/share_url" />
+
+    <item
+        android:id="@+id/print"
+        android:title="@string/print" />
+
+</menu>

@@ -2,12 +2,12 @@
 <resources>
 
     <!-- APPLICATION -->
-    <string name="app_name" translatable="false">Mera Social</string>
-    <string name="app_name_pro" translatable="false">Mera Social Pro</string>
+    <string name="app_name" translatable="false">Mediabook</string>
+    <string name="app_name_normal" translatable="false">Mediabook</string>
     <string name="notify_del" translatable="false">DEL</string>
     <string name="notify_remind" translatable="false">Remind</string>
     <string name="app_loading_title">Please wait..</string>
-    <string name="welcome_mediabook">Hello, welcome to Mera Social</string>
+    <string name="welcome_mediabook">Hello, welcome to Mediabook</string>
     <string name="warning_setting_title">Attention!</string>
     <string name="close_btn">Close</string>
     <string name="app_warning_title">Warning!</string>
@@ -29,15 +29,43 @@
     <string name="happy_aospstudio_donate_btn" translatable="false">Donate</string>
     <string name="dev_aospstudio" translatable="false">AOSP STUDIO LLC</string>
     <string name="issue_tracker_btn" translatable="false">issue tracker</string>
+    <string name="buy_title" translatable="false">Buy Pro version</string>
+    <string name="buy_btn" translatable="false">Buy Pro version</string>
+    <string name="buy_btn_disabled" translatable="false">Already purchased</string>
+    <string name="buy_msg" translatable="false">By upgrading Mediabook to the Pro version, you remove the application opening ads and also unlock additional features. You can upgrade to the Pro version to support us.</string>
+    <string name="hide_apps">Hide apps</string>
+    <string name="onjs_title">site says:</string>
+    <string name="edit_apps">Edit</string>
+    <string name="browser_start_text">You can start browsing by touching a social media from the home button.</string>
+
+    <!-- BOTTOM MENU -->
+    <string name="bottom_home">Homepage</string>
+    <string name="bottom_browser">Browser</string>
+    <string name="bottom_notify">Notifications</string>
+    <string name="bottom_more">Menu</string>
+
+    <!-- CONTEXT MENU -->
+    <string name="clipboard">Copy to clipboard</string>
+    <string name="next">Forward</string>
+    <string name="back">Back</string>
+    <string name="refresh_page">Refresh</string>
+    <string name="print">Print</string>
+
+    <!-- SAFE BROWSING-->
+    <string name="safebrowsing_title">Malware detected</string>
+    <string name="safebrowsing_msg">Mediabook has detected that this site has malware, and it has saved you from this situation.</string>
+    <string name="safebrowsing_btn">Okay</string>
 
     <!-- VERSIONS -->
-    <string name="app_version" translatable="false">1.0.1000.10</string>
-    <string name="chromium_version" translatable="false">Chrome/74.0.3729.157 Mobile</string>
-    <string name="opr_version" translatable="false">OPR/53.0.2551.140548</string>
-    <string name="dsktp_chromium_version" translatable="false">Chrome/73.0.3683.103</string>
-    <string name="dsktp_opr_version" translatable="false">OPR/60.0.3255.170</string>
+    <string name="app_version" translatable="false">6.5.6134</string>
+    <string name="chromium_version" translatable="false">Chrome/76.0.3809.132 Mobile</string>
+    <string name="opr_version" translatable="false">OPR/54.0.2672.49578</string>
+    <string name="dsktp_chromium_version" translatable="false">Chrome/77.0.3865.90</string>
+    <string name="dsktp_opr_version" translatable="false">OPR/64.0.3417.61</string>
 
     <!-- SITE NAMES -->
+    <string name="suggested">Suggested</string>
+    <string name="all_apps">All Apps</string>
     <string name="app_name_facebook" translatable="false">facebook</string>
     <string name="app_name_instagram" translatable="false">Instagram</string>
     <string name="app_name_soundcloud" translatable="false">SoundCloud</string>
@@ -53,7 +81,7 @@
     <string name="app_name_reddit" translatable="false">Reddit</string>
     <string name="app_name_dailymotion" translatable="false">dailymotion</string>
     <string name="app_name_twitch" translatable="false">Twitch</string>
-    <string name="app_name_vk" translatable="false">VK</string>
+    <string name="app_name_vk" translatable="false">VKontakte</string>
     <string name="app_name_weibo" translatable="false">Sina Weibo</string>
     <string name="app_name_youtube" translatable="false">YouTube</string>
     <string name="app_name_wiki" translatable="false">Wikipedia</string>
@@ -69,13 +97,24 @@
     <string name="app_name_meetup" translatable="false">Meetup</string>
     <string name="app_name_quora" translatable="false">Quora</string>
     <string name="app_name_wattpad" translatable="false">Wattpad</string>
+    <string name="app_name_igdirect" translatable="false">Direct</string>
+    <string name="app_name_spotify" translatable="false">Spotify</string>
+    <string name="app_name_ytmusic" translatable="false">YT Music</string>
+    <string name="app_name_dlive" translatable="false">DLive</string>
 
     <!-- NAV SHORTCUTS -->
     <string name="settings_btn">Settings</string>
     <string name="quit_application_btn">Exit application</string>
     <string name="exitapp_btn">exit app</string>
 
+    <!-- SNACKBARS -->
+    <string name="error_intent">There is a protocol that this application does not support.</string>
+    <string name="error_download">There was a problem downloading the file.</string>
+    <string name="snack_cleared">The selected data has been cleared.</string>
+
     <!-- ERROR SCREEN -->
+    <string name="title1">Hmm.. I think something is missing</string>
+    <string name="title2">Cannot display page due to an error</string>
     <string name="app_error_dialog_title">Unexpected error!</string>
     <string name="app_network_connection_error">Your current Internet connection was not found, please connect to a network and restart the application</string>
     <string name="app_page_load_error">For some reason, the browser crashed, unfortunately, we have lost your existing operations, thanks to the smart rescuer, which is the last time you left the browser to re-start the page.</string>
@@ -85,10 +124,17 @@
     <!-- SSL -->
     <string name="ssl_dialog_title">SSL Certificate Error</string>
     <string name="ssl_dialog_message">Do you want to continue anyway?</string>
+    <string name="ssl_error">There\'s a problem with the certificate.</string>
     <string name="ssl_untrusted">The certificate authority is not trusted.</string>
     <string name="ssl_expired">The certificate has expired.</string>
     <string name="ssl_idmismatch">The certificate Hostname mismatch.</string>
     <string name="ssl_notypevalid">The certificate is not yet valid.</string>
+
+    <!-- DOWNLOAD DIALOG -->
+    <string name="download_dialog_title">File download</string>
+    <string name="download_dialog_msg">the file will be downloaded. Continue?</string>
+    <string name="download_dialog_ok">Download</string>
+    <string name="download_dialog_cancel">Cancel</string>
 
     <!-- DOWNLOAD MANAGER -->
     <string name="download_error_title">Could not download file</string>
@@ -107,6 +153,8 @@
     <string name="categoryBrowser">Browser</string>
     <string name="categorySecurity">Security</string>
     <string name="categoryAccessibility">Accessibility</string>
+    <string name="categoryKeys">Keys and other</string>
+    <string name="categoryPermits">Site Settings</string>
     <string name="info_settings">Please restart the application to apply the settings.</string>
     <string name="setting_sw1">Turn off JavaScript</string>
     <string name="setting_sw2">Block images</string>
@@ -114,7 +162,7 @@
     <string name="setting_sw4">Privacy mode</string>
     <string name="setting_sw5">Don\'t sleep screen</string>
     <string name="setting_sw6">Desktop mode</string>
-    <string name="setting_sw7">Allow 3rd party cookies</string>
+    <string name="setting_sw7">Block 3rd party cookies</string>
     <string name="setting_sw8">Full screen mode</string>
     <string name="setting_sw9">Mera Sound Balancer</string>
     <string name="setting_sw10">Mera Color Enhancer</string>
@@ -122,9 +170,21 @@
     <string name="setting_sw12">Hide app top notifications</string>
     <string name="setting_sw13">Block pop-ups</string>
     <string name="setting_sw14">Recalling form data</string>
-    <string name="setting_sw15">Activate Amoled theme</string>
+    <string name="setting_sw15">Activate the dark theme</string>
     <string name="setting_sw16">Enable Chromium</string>
     <string name="setting_sw17">Show zoom controls</string>
+    <string name="setting_sw18">Battery saving mode</string>
+    <string name="setting_sw19">Hide social media name</string>
+    <string name="setting_sw20">Hide forward button</string>
+    <string name="setting_sw21">Hide refresh button</string>
+    <string name="setting_sw22">Hide top button</string>
+    <string name="setting_sw23">Allow sites to access location</string>
+    <string name="setting_sw24">Allow sites to access storage</string>
+    <string name="setting_sw25">Show print button</string>
+    <string name="setting_sw26">Hide navigation menu labels</string>
+    <string name="setting_sw27">Hide top bar on browser screen</string>
+    <string name="setting_sw28">Force vertical use</string>
+    <string name="setting_sw29">Turn off touch sounds</string>
     <string name="tips_title">Help center</string>
     <string name="privacy_btn">Privacy Policy</string>
     <string name="terms_btn">Terms of service</string>
@@ -142,6 +202,7 @@
     <string name="theme_amoled" translatable="false">Amoled black</string>
     <string name="theme_auto_btn">Auto mode</string>
     <string name="theme_light_btn">Light mode</string>
+    <string name="theme_lights_title">Turn off the lights</string>
 
     <!-- CLEAR APP -->
     <string name="clear_datas">Clear browsing and history data</string>
@@ -180,9 +241,5 @@
     <string name="shock_msg">The shock Restarter clears the browser\'s cache at maximum speed and restarts it. Should the browser be shocked now?</string>
     <string name="shock_yes">Now with shock</string>
     <string name="shock_notify">The browser was shocked and restarted</string>
-
-    <!-- URLS -->
-    <string name="appprivacy_url" translatable="false">https://aospstudio.org/web/privacyterms/en#privacy</string>
-    <string name="appterms_url" translatable="false">https://aospstudio.org/web/privacyterms/en#terms</string>
 
 </resources>

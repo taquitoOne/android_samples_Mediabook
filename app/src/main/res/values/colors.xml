@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ffffff</color>
-    <color name="colorPrimaryDark">#ffffff</color>
-    <color name="colorPrimaryDarkL">#898989</color>
-    <color name="colorAccent">#ff4285f4</color>
-    <color name="colorNightAccent">#ff4285f4</color>
-    <color name="colorBackground">#ffffff</color>
+    <color name="colorPrimaryDarkL">#000000</color>
+    <color name="colorToolbar">#363636</color>
     <color name="colorNavigation">#FFFFFF</color>
     <color name="systemnavcolor">#e5e5e5</color>
     <color name="ic_background">#FFFFFF</color>
     <color name="text_color">#212121</color>
     <color name="text_color_item">#212121</color>
-    <color name="settings_info_color">#686868</color>
-    <color name="settings_text_color">#212121</color>
     <color name="toolbar_button_color">#000000</color>
     <color name="system_nav">#fafafa</color>
     <color name="loadColor">#CCffffff</color>
     <color name="itemColors">#00ffffff</color>
     <color name="dialogColor">#ffffff</color>
     <color name="popupColor">#ffffff</color>
+    <color name="disabledTextColor">#949494</color>
+    <color name="malwarePrimary">#ff0000</color>
+    <color name="snackbarActionColor">#ffffff</color>
+
+    <!-- V4 -->
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="colorAccent">#1E88E5</color>
+    <color name="colorAccentRipple">#F273beff</color>
+    <color name="colorNightAccent">#1E88E5</color>
+    <color name="color_background">#ffffff</color>
+    <color name="sheetButtonColor">#f2f2f2</color>
+    <color name="fabColor">#ffffff</color>
+    <color name="sheet_background">#ffffff</color>
+    <color name="incognito_color">#f2e8ff</color>
+    <color name="incognito_colorDark">#f2e8ff</color>
+    <color name="settings_info_color">#686868</color>
+    <color name="settings_text_color">#212121</color>
 </resources>
